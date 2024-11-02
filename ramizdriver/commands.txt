@@ -1,0 +1,2 @@
+windres resource.rc -o resource.o
+g++ -o ramizbaba.exe ramizbaba.cpp resource.o -ladvapi32 -static -static-libgcc -static-libstdc++

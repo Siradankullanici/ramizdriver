@@ -1,0 +1,11 @@
+# Source file for the driver
+SRC=$(TARGETNAME).c
+TARGETNAME=utkudorukbayraktarantivirus
+TARGETTYPE=DRIVER
+TARGETPATH=obj
+TARGETOS=WIN7
+TARGETARCH=x64
+
+# Specify the source files
+SOURCES=$(TARGETNAME).c
+
