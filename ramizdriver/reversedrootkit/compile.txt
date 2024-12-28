@@ -1,0 +1,4 @@
+ml /c /coff /Fl keyboard.asm
+link /driver /subsystem:native /out:keyboard.sys /entry:_start keyboard.obj /machine:x86 Ntoskrnl.lib
+# C:\DdK\lib\i386\free\ntoskrnl.lib
+# For Windows XP but it'S too new linker: link /driver /subsystem:native /out:keyboard.sys /entry:_start keyboard.obj /machine:x86 /LIBPATH:"C:\WINDDK\3790\lib\wnet\i386" ntoskrnl.lib

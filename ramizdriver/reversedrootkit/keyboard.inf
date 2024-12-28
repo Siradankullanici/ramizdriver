@@ -1,0 +1,43 @@
+; Custom Rootkit Keyboard Driver Installation File
+
+[Version]
+Signature="$Windows NT$"
+Class=Keyboard
+ClassGuid={4D36E96B-E325-11CE-BFC1-08002BE10318}
+Provider=%ManufacturerName%
+DriverVer=12/28/2024,1.0.0.0
+
+[Manufacturer]
+%ManufacturerName%=Standard,NTx86
+
+[Standard]
+%DeviceDesc%=InstallDriver, HID\VID_0000&PID_0001  ; Replace with your device's actual hardware ID
+
+[NTx86]
+; Windows XP (32-bit) driver installation
+InstallDriver = %DriverFile%
+
+[InstallDriver]
+CopyFiles=DriverFiles
+AddReg=Keyboard_AddReg
+
+[DriverFiles]
+keyboard.sys
+
+[DestinationDirs]
+DefaultDestDir=12 ; system32\drivers
+
+[Keyboard_AddReg]
+; Add registry keys if necessary
+
+[SourceDisksNames]
+1 = %DiskName%,,,
+
+[SourceDisksFiles]
+keyboard.sys = 1
+
+[Strings]
+ManufacturerName = "Emirhan Ucan"
+DeviceDesc = "Custom Reverse-Engineered Rootkit Keyboard Driver"
+DiskName = "Rootkit Keyboard Driver Disk"
+DriverFile = "keyboard.sys"
