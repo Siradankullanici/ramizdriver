@@ -5,6 +5,6 @@
 
 NTSTATUS DriverEntry(void* a, void* b) {
     KeBugCheck(0xaabbccdd);
-    return STATUS_SUCCES;
+    return STATUS_SUCCESS;
     
 }
